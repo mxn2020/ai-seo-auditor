@@ -1,60 +1,94 @@
-# AI SEO Auditor & Content Optimizer
+# AI SEO Auditor
 
-## Pages & Features
+AI-powered SEO auditing and content optimization tool.
 
-### 1. Dashboard
-- Overall site health score
-- Top issues by severity (critical, warning, info)
-- Keyword ranking snapshot
-- Traffic trend chart (organic sessions)
-- Competitor comparison widget
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Site Audit
-- Full crawl of website with issue detection
-- Page-by-page SEO score
-- Technical issues (broken links, slow pages, missing tags)
-- Mobile-friendliness check
-- Core Web Vitals analysis
-- Crawl schedule configuration
+## Tech Stack
 
-### 3. Keyword Research
-- AI keyword suggestions based on niche / content
-- Search volume, difficulty & CPC data
-- Keyword clustering by topic
-- Long-tail keyword generator
-- Competitor keyword gap analysis
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Content Optimizer
-- Paste or connect page content for analysis
-- AI recommendations (keyword usage, readability, structure)
-- Heading hierarchy & meta tag suggestions
-- Internal linking suggestions
-- Content score & improvement checklist
-- AI content rewrite suggestions
+## Getting Started
 
-### 5. Rank Tracker
-- Track keyword positions over time
-- Desktop & mobile ranking comparison
-- Local vs. global ranking
-- SERP feature tracking (featured snippets, PAA)
-- Competitor rank comparison
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Backlink Monitor
-- Backlink profile overview
-- New & lost backlinks alerts
-- Domain authority tracking
-- Toxic backlink detection
-- Disavow list builder
+## License
 
-### 7. Reports
-- Automated weekly / monthly SEO reports
-- White-label report option
-- Metric comparison across time periods
-- Export as PDF / CSV
+MIT © Mehdi Nabhani
 
-### 8. Settings
-- Website & search engine configuration
-- Crawl frequency & depth
-- Google Search Console & Analytics integration
-- Notification rules
-- Team access & permissions
+---
+
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
